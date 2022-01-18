@@ -24,6 +24,7 @@ func main() {
 
 	var p2 person
 	fmt.Println(unsafe.Sizeof(p2))
+	fmt.Println(p2.name == "")
 
 	var ppp struct{}
 	fmt.Println(unsafe.Sizeof(ppp))
