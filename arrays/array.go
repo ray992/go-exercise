@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 )
+
 //值类型
 func main() {
-	var intArray [3]int
+	var intArray [4]int
 	fmt.Println(intArray)
 
 	var stringArray = [3]string{"a", "b"}
@@ -14,9 +15,9 @@ func main() {
 	var string2Array = [3]string{"c", "d", "e"}
 	fmt.Println(string2Array)
 
-	var p = [...]int{ 3, 4, 5}
+	var p = [...]int{3, 4, 5}
 	fmt.Println(p)
-	for i:= 0 ; i < len(p); i++ {
+	for i := 0; i < len(p); i++ {
 		fmt.Print(p[i])
 	}
 	fmt.Println()
@@ -24,7 +25,7 @@ func main() {
 		fmt.Print(index, val)
 	}
 	fmt.Println()
-	var intSArray =[2][2]int{{1,2}, {3,4}}
+	var intSArray = [2][2]int{{1, 2}, {3, 4}}
 	for i := 0; i < len(intSArray); i++ {
 		for j := 0; j < len(intSArray[i]); j++ {
 			fmt.Print(intSArray[i][j])
@@ -32,7 +33,7 @@ func main() {
 	}
 	fmt.Println()
 	for _, val := range intSArray {
-		for _, val2 := range val{
+		for _, val2 := range val {
 			fmt.Print(val2)
 		}
 	}

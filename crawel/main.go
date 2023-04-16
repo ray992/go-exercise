@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	resp, err := http.Get("https://www.zhenai.com/zhenghun")
+	resp, err := http.Get("http://localhost:8080/mock/www.zhenai.com/zhenghun")
 	if err != nil {
 		panic(err)
 	}
@@ -16,9 +16,10 @@ func main() {
 	if resp.StatusCode != http.StatusOK {
 		return
 	}
+
 	bytes, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		panic(bytes)
+		panic(err)
 	}
 	fmt.Printf("%s", bytes)
 }

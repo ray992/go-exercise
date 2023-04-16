@@ -11,14 +11,16 @@ func main() {
 	fmt.Println(error)
 
 	fmt.Printf("%b", 123) //二进制
+	fmt.Println()
 	fmt.Printf("%c", 123) //unicode
+	fmt.Println()
 	fmt.Printf("%o", 123) //八进制
 
 	fmt.Println()
 
 	var (
 		name string
-		age int
+		age  int
 	)
 	fmt.Scan(&name, &age)
 	fmt.Println(name, age)
