@@ -9,7 +9,7 @@ func main() {
 	copy(s2, s1)
 	fmt.Println(s2)
 
-	s3 := append([]int(nil), s1...)
+	s3 := append([]int{}, s1...)
 	fmt.Println(s3)
 
 	s4 := append(s1[:0:0], s1...)

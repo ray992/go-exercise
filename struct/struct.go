@@ -5,12 +5,18 @@ import (
 	"unsafe"
 )
 
-type myInt int8 //别名
+type myInt int8      //别名
 type myArray [3]int8 //别名
 
-type person struct {
+type child struct {
 	name string
-	age int
+	age  int
+}
+
+type person struct {
+	name     string
+	age      int
+	children []child
 }
 
 func main() {
@@ -19,7 +25,7 @@ func main() {
 	var pp myArray
 	pp[0] = 1
 	fmt.Println(pp)
-	var p1 person = person{"ray", 12}
+	var p1 person = person{"ray", 12, []child{{"mike", 12}, {"jenny", 10}}}
 	fmt.Println(p1)
 
 	var p2 person
@@ -28,6 +34,5 @@ func main() {
 
 	var ppp struct{}
 	fmt.Println(unsafe.Sizeof(ppp))
-
 
 }

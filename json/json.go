@@ -6,17 +6,19 @@ import (
 )
 
 type Person struct {
-	Name string `json:"myName"` //字段要大写
-	Age int64 `json:"ageInfo"`
-	Sex string`json:"common_sex"`
+	Name       string `json:"myName"` //字段要大写
+	Age        int64  `json:"ageInfo"`
+	Sex        string `json:"common_sex"`
+	Motherland string `json:"motherland"`
 }
 
 func main() {
 
 	p := Person{
-		Name: "mike",
-		Age: 28,
-		Sex: "male",
+		Name:       "mike",
+		Age:        28,
+		Sex:        "male",
+		Motherland: "china",
 	}
 	bytes, err := json.Marshal(p)
 	if err != nil {

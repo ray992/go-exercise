@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(123_345)
+	fmt.Println(123_3245)
 	fmt.Println(math.MaxFloat32)
 	fmt.Println(math.MaxFloat64)
 	fmt.Println(math.MaxInt32)

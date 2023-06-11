@@ -5,12 +5,6 @@ import (
 	"strings"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 var res string
 
 func tree2str(root *TreeNode) string {

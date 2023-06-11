@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var m = make(map[string]int, 8)
+	var m = make(map[string]int, 200)
 	m["a"] = 1
 	m["b"] = 2
 	m["c"] = 3

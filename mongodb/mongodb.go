@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"log"
 
+	_ "go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	_ "go.mongodb.org/mongo-driver/bson"
 )
 
 type Student struct {
 	Name string
-	Age int
+	Age  int
 }
 
 func main() {
@@ -35,16 +35,12 @@ func main() {
 
 	s1 := Student{"小强", 28}
 
-
 	insertResult, err := collection.InsertOne(context.TODO(), s1)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-
-
 	fmt.Println("Inserted a single document: ", insertResult.InsertedID)
 
-
-	client.Disconnect(context.TODO())
+	_ = client.Disconnect(context.TODO())
 }

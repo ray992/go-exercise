@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	now := time.Now();
+	now := time.Now()
 	fmt.Println(now)
 	year := now.Year()
 	month := now.Month()
@@ -23,8 +23,8 @@ func main() {
 	before := now.Sub(later)
 	fmt.Println(before)
 
-	ticker := time.Tick(time.Second*5)
-	for i := range ticker{
+	ticker := time.Tick(time.Second * 5)
+	for i := range ticker {
 		fmt.Println(i)
 	}
 }
