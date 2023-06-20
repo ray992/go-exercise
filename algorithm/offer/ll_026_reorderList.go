@@ -1,9 +1,9 @@
 package main
 
-type ListNode struct {
+/*type ListNode struct {
 	Val  int
 	Next *ListNode
-}
+}*/
 
 // 重排链表 （线性表）
 func reorderList(head *ListNode) {
@@ -16,7 +16,7 @@ func reorderList(head *ListNode) {
 		nodes = append(nodes, node)
 		node = node.Next
 	}
-	i, j := 0, len(nodes) - 1
+	i, j := 0, len(nodes)-1
 	for i < j {
 		nodes[i].Next = nodes[j]
 		i++

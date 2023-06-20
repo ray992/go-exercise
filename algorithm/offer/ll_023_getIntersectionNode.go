@@ -1,17 +1,16 @@
-
 package main
 
 /**
 	两个链表的第一个重合节点
 **/
 
-type ListNode struct {
+/*type ListNode struct {
 	Val int
 	Next *ListNode
-}
+}*/
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
-    nodeMap := make(map[*ListNode]bool)
+	nodeMap := make(map[*ListNode]bool)
 	if headA == nil || headB == nil {
 		return nil
 	}
@@ -36,6 +35,23 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	return nil
 }
 
-func main()  {
-	
+func getIntersectionNode2(headA, headB *ListNode) *ListNode {
+	nodeA, nodeB := headA, headB
+	for nodeA != nodeB {
+		if nodeA != nil {
+			nodeA = nodeA.Next
+		} else {
+			nodeA = headB
+		}
+		if nodeB != nil {
+			nodeB = nodeB.Next
+		} else {
+			nodeB = headA
+		}
+	}
+	return nodeA
+}
+
+func main() {
+
 }
